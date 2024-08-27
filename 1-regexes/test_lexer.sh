@@ -41,11 +41,16 @@ for i in test/in/*.txt; do
     BASENAME=$(basename $i .txt);
     cat $i | ${DOS2UNIX} | ./histogram  > test/out/$BASENAME.stdout.txt  2> test/out/$BASENAME.stderr.txt
 
+    #if [$i < 15] then 
+    echo "Program output (stdout):"
+    cat test/out/$BASENAME.stdout.txt
+
     diff <(cat test/ref/$BASENAME.stdout.txt | ${DOS2UNIX}) <(cat test/out/$BASENAME.stdout.txt) > test/out/$BASENAME.diff.txt
     if [[ "$?" -ne "0" ]]; then
         echo -e "\nERROR"
     else
         PASSED=$(( ${PASSED}+1 ));
+        echo "Passed : ${i}"
     fi
     CHECKED=$(( ${CHECKED}+1 ));
 done

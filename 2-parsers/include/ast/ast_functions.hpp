@@ -5,21 +5,30 @@
 
 #include <cmath>
 
+// virtual = can be overriden in derived class
+// override = function is intended to override virtual function in base class (Expression)
 class Function
     : public Expression
 {
 private:
     ExpressionPtr arg;
-protected:
+protected: 
+
+//constructor for Function class, which takes an ExpressionPtr _arg as an argument
+//and intitialises arg in the function class to _arg
+
     Function(ExpressionPtr _arg)
         : arg(_arg)
-    {}
+    {} 
 public:
+
+    //destructor for Function class, only has to delete arg
     virtual ~Function()
     {
         delete arg;
     }
 
+    //pure virtual function that does not have implementation in base class
     virtual const char * getFunction() const =0;
 
     ExpressionPtr getArg() const
@@ -27,9 +36,9 @@ public:
 
     virtual void print(std::ostream &dst) const override
     {
-        dst<<getFunction()<<"( ";
-        arg->print(dst);
-        dst<<" )";
+        dst<<getFunction()<<"( ";   //prints out name of function (
+        arg->print(dst);            //calls print method on arg
+        dst<<" )";                  // )
     }
 
     virtual double evaluate(
@@ -53,6 +62,15 @@ public:
     { return "log"; }
     
     // TODO-E : Override evaluate, and implement it
+
+    double evaluate(
+        const std::map<std::string,double> &bindings
+    ) const override
+    {
+        double argValue = getArg()->evaluate(bindings);
+        return std::log(argValue);
+    }
+
 };
 
 class ExpFunction
@@ -65,6 +83,15 @@ public:
 
     virtual const char *getFunction() const
     { return "exp"; }
+
+    double evaluate(
+        const std::map<std::string,double> &bindings
+    ) const override
+    {
+        double argValue = getArg()->evaluate(bindings);
+        return std::exp(argValue);
+    }
+
 };
 
 class SqrtFunction
@@ -77,6 +104,15 @@ public:
 
     virtual const char *getFunction() const
     { return "sqrt"; }
+
+    double evaluate(
+        const std::map<std::string,double> &bindings
+    ) const override
+    {
+        double argValue = getArg()->evaluate(bindings);
+        return std::sqrt(argValue);
+    }
+
 };
 
 

@@ -1,0 +1,166 @@
+Nonterminals useless in grammar
+
+    FUNCTION_NAME
+
+
+Terminals unused in grammar
+
+    T_TIMES
+    T_DIVIDE
+    T_PLUS
+    T_MINUS
+    T_EXPONENT
+    T_LOG
+    T_EXP
+    T_SQRT
+    T_VARIABLE
+
+
+Rules useless in grammar
+
+    7 FUNCTION_NAME: T_LOG
+
+
+Grammar
+
+    0 $accept: ROOT $end
+
+    1 ROOT: EXPR
+
+    2 EXPR: TERM
+
+    3 TERM: UNARY
+
+    4 UNARY: FACTOR
+
+    5 FACTOR: T_NUMBER
+    6       | T_LBRACKET EXPR T_RBRACKET
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    error (256)
+    T_TIMES (258)
+    T_DIVIDE (259)
+    T_PLUS (260)
+    T_MINUS (261)
+    T_EXPONENT (262)
+    T_LBRACKET (263) 6
+    T_RBRACKET (264) 6
+    T_LOG <string> (265)
+    T_EXP <string> (266)
+    T_SQRT <string> (267)
+    T_NUMBER <number> (268) 5
+    T_VARIABLE <string> (269)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (15)
+        on left: 0
+    ROOT (16)
+        on left: 1
+        on right: 0
+    EXPR <expr> (17)
+        on left: 2
+        on right: 1 6
+    TERM <expr> (18)
+        on left: 3
+        on right: 2
+    UNARY <expr> (19)
+        on left: 4
+        on right: 3
+    FACTOR <expr> (20)
+        on left: 5 6
+        on right: 4
+
+
+State 0
+
+    0 $accept: • ROOT $end
+
+    T_LBRACKET  shift, and go to state 1
+    T_NUMBER    shift, and go to state 2
+
+    ROOT    go to state 3
+    EXPR    go to state 4
+    TERM    go to state 5
+    UNARY   go to state 6
+    FACTOR  go to state 7
+
+
+State 1
+
+    6 FACTOR: T_LBRACKET • EXPR T_RBRACKET
+
+    T_LBRACKET  shift, and go to state 1
+    T_NUMBER    shift, and go to state 2
+
+    EXPR    go to state 8
+    TERM    go to state 5
+    UNARY   go to state 6
+    FACTOR  go to state 7
+
+
+State 2
+
+    5 FACTOR: T_NUMBER •
+
+    $default  reduce using rule 5 (FACTOR)
+
+
+State 3
+
+    0 $accept: ROOT • $end
+
+    $end  shift, and go to state 9
+
+
+State 4
+
+    1 ROOT: EXPR •
+
+    $default  reduce using rule 1 (ROOT)
+
+
+State 5
+
+    2 EXPR: TERM •
+
+    $default  reduce using rule 2 (EXPR)
+
+
+State 6
+
+    3 TERM: UNARY •
+
+    $default  reduce using rule 3 (TERM)
+
+
+State 7
+
+    4 UNARY: FACTOR •
+
+    $default  reduce using rule 4 (UNARY)
+
+
+State 8
+
+    6 FACTOR: T_LBRACKET EXPR • T_RBRACKET
+
+    T_RBRACKET  shift, and go to state 10
+
+
+State 9
+
+    0 $accept: ROOT $end •
+
+    $default  accept
+
+
+State 10
+
+    6 FACTOR: T_LBRACKET EXPR T_RBRACKET •
+
+    $default  reduce using rule 6 (FACTOR)

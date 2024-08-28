@@ -53,7 +53,7 @@ TERM : UNARY          { $$ = $1; }
 UNARY : FACTOR        { $$ = $1; }
 
 /* TODO-2 : Add a rule for variable, base on the pattern of number. */
-FACTOR : T_NUMBER     { /* TODO-1 : uncomment this:   $$ = new Number( $1 ); */ }
+FACTOR : T_NUMBER     { $$ = new Number( $1 ); } /* TODO-1 : uncomment this:   */
        | T_LBRACKET EXPR T_RBRACKET { $$ = $2; }
 
 /* TODO-6 : Add support log(x), by modifying the rule for FACTOR. */

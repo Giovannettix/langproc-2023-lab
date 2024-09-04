@@ -1,0 +1,42 @@
+const x 0
+const _zero_1 0
+add _res_0 x _zero_1
+const y 1
+const _zero_2 0
+add _res_0 y _zero_2
+const _zero_8 0
+add _valA_6 x _zero_8
+const _valB_7 1
+add _cond_5 _valA_6 _valB_7
+const _zero_9 0
+beq _cond_5 _zero_9 _falseLbl_3
+const _zero_13 0
+add _cond_12 y _zero_13
+const _zero_14 0
+beq _cond_12 _zero_14 _falseLbl_10
+const _zero_18 0
+:_loop_15
+const _zero_19 0
+add _res_0 x _zero_19
+beq _res_0 _zero_18 _endLbl_16
+const x 1
+const _zero_20 0
+add _whileOut_17 x _zero_20
+beq _zero_18 _zero_18 _loop_15
+:_endLbl_16
+const x 2
+const _zero_21 0
+add _res_0 x _zero_21
+beq _zero_14 _zero_14 _endLbl_11
+:_falseLbl_10
+const _res_0 4
+:_endLbl_11
+beq _zero_9 _zero_9 _endLbl_4
+:_falseLbl_3
+const x 3
+const _zero_22 0
+add _res_0 x _zero_22
+:_endLbl_4
+const _zero_23 0
+add _res_0 x _zero_23
+halt _res_0

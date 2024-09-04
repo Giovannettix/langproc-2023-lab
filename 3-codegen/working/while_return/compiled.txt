@@ -1,0 +1,9 @@
+const _zero_4 0
+:_loop_1
+const _res_0 0
+beq _res_0 _zero_4 _endLbl_2
+const _whileOut_3 1
+beq _zero_4 _zero_4 _loop_1
+:_endLbl_2
+const _res_0 17
+halt _res_0

@@ -1,0 +1,17 @@
+Src: param _cond_3 0
+Src: const _zero_4 0
+Src: beq _cond_3 _zero_4 _falseLbl_1
+Src: param _res_0 1
+Src: beq _zero_4 _zero_4 _endLbl_2
+Src: :_falseLbl_1
+Src: param _res_0 2
+Src: :_endLbl_2
+Src: halt _res_0
+Exec 0:param _cond_3 0, {}
+Exec 1:const _zero_4 0, { _cond_3:0}
+Exec 2:, { _cond_3:0 _zero_4:0}
+getReg(_cond_3)
+getReg(_zero_4)
+Exec 5:param _res_0 2, { _cond_3:0 _zero_4:0}
+Exec 6:, { _cond_3:0 _res_0:7 _zero_4:0}
+getReg(_res_0)

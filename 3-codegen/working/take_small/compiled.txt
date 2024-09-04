@@ -1,0 +1,27 @@
+input i
+const _zero_1 0
+add _res_0 i _zero_1
+const _zero_5 0
+:_loop_2
+const _zero_6 0
+add _res_0 i _zero_6
+beq _res_0 _zero_5 _endLbl_3
+const _zero_12 0
+add _valA_10 i _zero_12
+const _valB_11 16
+lt _cond_9 _valA_10 _valB_11
+const _zero_13 0
+beq _cond_9 _zero_13 _falseLbl_7
+const _zero_14 0
+add _whileOut_4 i _zero_14
+output _whileOut_4
+beq _zero_13 _zero_13 _endLbl_8
+:_falseLbl_7
+const _whileOut_4 10
+:_endLbl_8
+input i
+const _zero_15 0
+add _whileOut_4 i _zero_15
+beq _zero_5 _zero_5 _loop_2
+:_endLbl_3
+halt _res_0

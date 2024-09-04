@@ -1,0 +1,32 @@
+param a 0
+const _zero_1 0
+add _res_0 a _zero_1
+param b 1
+const _zero_2 0
+add _res_0 b _zero_2
+const acc 0
+const _zero_3 0
+add _res_0 acc _zero_3
+const _zero_7 0
+:_loop_4
+const _zero_8 0
+add _res_0 b _zero_8
+beq _res_0 _zero_7 _endLbl_5
+const _zero_11 0
+add _valA_9 acc _zero_11
+const _zero_12 0
+add _valB_10 a _zero_12
+add acc _valA_9 _valB_10
+const _zero_13 0
+add _whileOut_6 acc _zero_13
+const _zero_16 0
+add _valA_14 b _zero_16
+const _valB_15 -1
+add b _valA_14 _valB_15
+const _zero_17 0
+add _whileOut_6 b _zero_17
+beq _zero_7 _zero_7 _loop_4
+:_endLbl_5
+const _zero_18 0
+add _res_0 acc _zero_18
+halt _res_0

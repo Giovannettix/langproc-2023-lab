@@ -1,0 +1,187 @@
+param a 0
+const _zero_1 0
+add _res_0 a _zero_1
+param b 1
+const _zero_2 0
+add _res_0 b _zero_2
+const acc 0
+const _zero_3 0
+add _res_0 acc _zero_3
+const _zero_6 0
+add _valA_4 b _zero_6
+const _zero_7 0
+add _valB_5 b _zero_7
+add b2 _valA_4 _valB_5
+const _zero_8 0
+add _res_0 b2 _zero_8
+const _zero_11 0
+add _valA_9 b2 _zero_11
+const _zero_12 0
+add _valB_10 b2 _zero_12
+add b4 _valA_9 _valB_10
+const _zero_13 0
+add _res_0 b4 _zero_13
+const _zero_16 0
+add _valA_14 b4 _zero_16
+const _zero_17 0
+add _valB_15 b4 _zero_17
+add b8 _valA_14 _valB_15
+const _zero_18 0
+add _res_0 b8 _zero_18
+const _zero_21 0
+add _valA_19 b8 _zero_21
+const _zero_22 0
+add _valB_20 b8 _zero_22
+add b16 _valA_19 _valB_20
+const _zero_23 0
+add _res_0 b16 _zero_23
+const _zero_26 0
+add _valA_24 b16 _zero_26
+const _zero_27 0
+add _valB_25 b16 _zero_27
+add b32 _valA_24 _valB_25
+const _zero_28 0
+add _res_0 b32 _zero_28
+const _zero_34 0
+add _valA_32 a _zero_34
+const _valB_33 32
+lt _cond_31 _valA_32 _valB_33
+const _zero_35 0
+beq _cond_31 _zero_35 _falseLbl_29
+const _res_0 0
+beq _zero_35 _zero_35 _endLbl_30
+:_falseLbl_29
+const _zero_38 0
+add _valA_36 acc _zero_38
+const _zero_39 0
+add _valB_37 b32 _zero_39
+add acc _valA_36 _valB_37
+const _zero_40 0
+add _res_0 acc _zero_40
+const _zero_43 0
+add _valA_41 a _zero_43
+const _valB_42 32
+sub a _valA_41 _valB_42
+const _zero_44 0
+add _res_0 a _zero_44
+:_endLbl_30
+const _zero_50 0
+add _valA_48 a _zero_50
+const _valB_49 16
+lt _cond_47 _valA_48 _valB_49
+const _zero_51 0
+beq _cond_47 _zero_51 _falseLbl_45
+const _res_0 0
+beq _zero_51 _zero_51 _endLbl_46
+:_falseLbl_45
+const _zero_54 0
+add _valA_52 acc _zero_54
+const _zero_55 0
+add _valB_53 b16 _zero_55
+add acc _valA_52 _valB_53
+const _zero_56 0
+add _res_0 acc _zero_56
+const _zero_59 0
+add _valA_57 a _zero_59
+const _valB_58 16
+sub a _valA_57 _valB_58
+const _zero_60 0
+add _res_0 a _zero_60
+:_endLbl_46
+const _zero_66 0
+add _valA_64 a _zero_66
+const _valB_65 8
+lt _cond_63 _valA_64 _valB_65
+const _zero_67 0
+beq _cond_63 _zero_67 _falseLbl_61
+const _res_0 0
+beq _zero_67 _zero_67 _endLbl_62
+:_falseLbl_61
+const _zero_70 0
+add _valA_68 acc _zero_70
+const _zero_71 0
+add _valB_69 b8 _zero_71
+add acc _valA_68 _valB_69
+const _zero_72 0
+add _res_0 acc _zero_72
+const _zero_75 0
+add _valA_73 a _zero_75
+const _valB_74 8
+sub a _valA_73 _valB_74
+const _zero_76 0
+add _res_0 a _zero_76
+:_endLbl_62
+const _zero_82 0
+add _valA_80 a _zero_82
+const _valB_81 4
+lt _cond_79 _valA_80 _valB_81
+const _zero_83 0
+beq _cond_79 _zero_83 _falseLbl_77
+const _res_0 0
+beq _zero_83 _zero_83 _endLbl_78
+:_falseLbl_77
+const _zero_86 0
+add _valA_84 acc _zero_86
+const _zero_87 0
+add _valB_85 b4 _zero_87
+add acc _valA_84 _valB_85
+const _zero_88 0
+add _res_0 acc _zero_88
+const _zero_91 0
+add _valA_89 a _zero_91
+const _valB_90 4
+sub a _valA_89 _valB_90
+const _zero_92 0
+add _res_0 a _zero_92
+:_endLbl_78
+const _zero_98 0
+add _valA_96 a _zero_98
+const _valB_97 2
+lt _cond_95 _valA_96 _valB_97
+const _zero_99 0
+beq _cond_95 _zero_99 _falseLbl_93
+const _res_0 0
+beq _zero_99 _zero_99 _endLbl_94
+:_falseLbl_93
+const _zero_102 0
+add _valA_100 acc _zero_102
+const _zero_103 0
+add _valB_101 b2 _zero_103
+add acc _valA_100 _valB_101
+const _zero_104 0
+add _res_0 acc _zero_104
+const _zero_107 0
+add _valA_105 a _zero_107
+const _valB_106 2
+sub a _valA_105 _valB_106
+const _zero_108 0
+add _res_0 a _zero_108
+:_endLbl_94
+const _zero_114 0
+add _valA_112 a _zero_114
+const _valB_113 1
+lt _cond_111 _valA_112 _valB_113
+const _zero_115 0
+beq _cond_111 _zero_115 _falseLbl_109
+const _res_0 0
+beq _zero_115 _zero_115 _endLbl_110
+:_falseLbl_109
+const _zero_118 0
+add _valA_116 acc _zero_118
+const _zero_119 0
+add _valB_117 b _zero_119
+add acc _valA_116 _valB_117
+const _zero_120 0
+add _res_0 acc _zero_120
+const _zero_123 0
+add _valA_121 a _zero_123
+const _valB_122 1
+sub a _valA_121 _valB_122
+const _zero_124 0
+add _res_0 a _zero_124
+:_endLbl_110
+const _zero_125 0
+add _res_0 acc _zero_125
+output _res_0
+const _res_0 0
+halt _res_0

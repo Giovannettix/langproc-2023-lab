@@ -1,0 +1,50 @@
+const x 0
+const _zero_1 0
+add _res_0 x _zero_1
+const z 0
+const _zero_2 0
+add _res_0 z _zero_2
+const _zero_6 0
+:_loop_3
+const _zero_9 0
+add _valA_7 z _zero_9
+const _valB_8 4
+lt _res_0 _valA_7 _valB_8
+beq _res_0 _zero_6 _endLbl_4
+const i 0
+const _zero_10 0
+add _whileOut_5 i _zero_10
+const _zero_14 0
+:_loop_11
+const _zero_17 0
+add _valA_15 i _zero_17
+const _valB_16 5
+lt _whileOut_5 _valA_15 _valB_16
+beq _whileOut_5 _zero_14 _endLbl_12
+const _zero_20 0
+add _valA_18 x _zero_20
+const _zero_21 0
+add _valB_19 z _zero_21
+add x _valA_18 _valB_19
+const _zero_22 0
+add _whileOut_13 x _zero_22
+const _zero_25 0
+add _valA_23 i _zero_25
+const _valB_24 1
+add i _valA_23 _valB_24
+const _zero_26 0
+add _whileOut_13 i _zero_26
+beq _zero_14 _zero_14 _loop_11
+:_endLbl_12
+const _zero_27 0
+add _whileOut_5 x _zero_27
+output _whileOut_5
+const _zero_30 0
+add _valA_28 z _zero_30
+const _valB_29 1
+add z _valA_28 _valB_29
+const _zero_31 0
+add _whileOut_5 z _zero_31
+beq _zero_6 _zero_6 _loop_3
+:_endLbl_4
+halt _res_0
